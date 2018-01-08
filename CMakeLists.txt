@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( traveling_salesman )
+find_package( OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( traveling_salesman main.cpp Map.cpp Chromosome.cpp Population.cpp)
+target_link_libraries( traveling_salesman ${OpenCV_LIBS} )
